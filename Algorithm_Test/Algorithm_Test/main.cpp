@@ -12,6 +12,28 @@
 
 int main(int argc, const char * argv[]) {
     Solution *solution = new Solution();
+    
+    // Remove Duplicates from Sorted List
+    auto list = new ListNode();
+    list->val = 1;
+    list->next = new ListNode();
+    list->next->val = 2;
+    list->next->next = new ListNode();
+    list->next->next->val = 3;
+    list->next->next->next = new ListNode();
+    list->next->next->next->val = 3;
+    list->next->next->next->next = new ListNode();
+    list->next->next->next->next->val = 4;
+    list->next->next->next->next->next = new ListNode();
+    list->next->next->next->next->next->val = 4;
+    list->next->next->next->next->next->next = new ListNode();
+    list->next->next->next->next->next->next->val = 5;
+    solution->deleteDuplicates(list);
+    
+    // Remove Duplicate Letters
+    solution->removeDuplicateLetters("dtcbbkt");
+    
+    // Merge Sorted Array
     auto num1 = std::vector<int>{2, 6, 5};
     auto num2 = std::vector<int>{3, 1, 7};
     solution->mergeStart(num1, 3, num2, 3);
@@ -23,19 +45,19 @@ int main(int argc, const char * argv[]) {
     lL1->next->next = new ListNode();
     lL1->next->next->val = 3;
 
+    // Add Two Numbers
     auto lL2 = new ListNode();
     lL2->val = 5;
     lL2->next = new ListNode();
     lL2->next->val = 6;
     lL2->next->next = new ListNode();
     lL2->next->next->val = 4;
-
     solution->addTwoNumbers(lL1, lL2);
 
     // Reverse Integer
     solution->reverse(5613);
     
-    //Two Sum
+    // Two Sum
     auto nums = std::vector<int>{1, 2, 3, 4, 5};
     int target = 9;
     solution->twoSum(nums, target);

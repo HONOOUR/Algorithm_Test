@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <string>
 
 struct ListNode {
     int val;
@@ -122,6 +123,7 @@ public:
         return lL3;
     }
     
+    // Merge Sorted Array (https://leetcode.com/problems/merge-sorted-array/)
     void mergeStart(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n) {
 
         // sum nums1 and nums2
@@ -178,5 +180,54 @@ public:
         {
             nums[z] = temp[z];
         }
+    }
+    
+    // Remove Duplicate Letters (https://leetcode.com/problems/remove-duplicate-letters/)
+    std::string removeDuplicateLetters(std::string s)
+    {
+        // itr string and add it to vector <char> hash linked list
+        // return only firt one.
+        std::vector<char> characters;
+        std::copy(s.begin(), s.end(), std::back_inserter(characters));
+        
+        std::vector<char> newCharacters;
+        char z = 'z';
+        newCharacters.resize((int)z, 0);
+        for (auto ch: s)
+        {
+            newCharacters[ch] = ch;
+        }
+        
+        std::vector<char> newVector;
+        for (auto &ch: newCharacters)
+        {
+            if (ch != 0)
+            {
+                newVector.push_back(ch);
+            }
+        }
+        
+        std::string newString(newVector.begin(), newVector.end());
+        std::cout << "new string = " << newString << std::endl;
+        
+        return newString;
+    }
+    
+    // Remove Duplicates from Sorted List (https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+    ListNode* deleteDuplicates(ListNode* head)
+    {
+        // while head->next == null
+        // if ( head->val == head->next->val )
+        // head->next = head->next->next
+        auto temp = head;
+        while (temp->next != nullptr)
+        {
+            if (temp->val == temp->next->val)
+            {
+                temp->next = temp->next->next;
+            }
+            temp = temp->next;
+        }
+        return head;
     }
 };
