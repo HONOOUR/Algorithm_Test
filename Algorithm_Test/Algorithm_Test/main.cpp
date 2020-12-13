@@ -7,12 +7,27 @@
 //
 
 #include "Solution.cpp"
+#include "Solution_Hash.cpp"
+#include "Solution_DAG.cpp"
 #include <iostream>
 #include <vector>
 
 int main(int argc, const char * argv[]) {
-    Solution *solution = new Solution();
+    Solution_DAG *solution_dag = new Solution_DAG();
+    auto graph = std::vector<std::vector<int>> {{1,2}, {3}, {3}, {}};
+    solution_dag->allPathSourceTarget(graph);
     
+    
+    Solution_Hash *solution_hash = new Solution_Hash();
+    auto tNode = new TreeNode(1);
+    tNode->left = new TreeNode(2);
+    tNode->right = new TreeNode(5);
+    tNode->left->left = new TreeNode(3);
+    tNode->left->left->left = new TreeNode(4);
+    solution_hash->printTree(tNode);
+    
+    
+    Solution *solution = new Solution();
     // Remove Duplicates from Sorted List
     auto list = new ListNode();
     list->val = 1;

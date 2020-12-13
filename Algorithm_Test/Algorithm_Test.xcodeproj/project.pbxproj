@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C2A3B39D25728E8300DF4D52 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B39C25728E8300DF4D52 /* main.cpp */; };
 		C2A3B3A525728F7E00DF4D52 /* Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B3A325728F7E00DF4D52 /* Solution.cpp */; };
+		C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */; };
+		C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B6754D258477EA00B67803 /* Solution_DAG.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		C2A3B39925728E8300DF4D52 /* Algorithm_Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm_Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A3B39C25728E8300DF4D52 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C2A3B3A325728F7E00DF4D52 /* Solution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution.cpp; sourceTree = "<group>"; };
+		C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_Hash.cpp; sourceTree = "<group>"; };
+		C2B6754D258477EA00B67803 /* Solution_DAG.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_DAG.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				C2A3B39C25728E8300DF4D52 /* main.cpp */,
 				C2A3B3A325728F7E00DF4D52 /* Solution.cpp */,
+				C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */,
+				C2B6754D258477EA00B67803 /* Solution_DAG.cpp */,
 			);
 			path = Algorithm_Test;
 			sourceTree = "<group>";
@@ -122,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */,
+				C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */,
 				C2A3B3A525728F7E00DF4D52 /* Solution.cpp in Sources */,
 				C2A3B39D25728E8300DF4D52 /* main.cpp in Sources */,
 			);
