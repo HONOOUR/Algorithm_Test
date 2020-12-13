@@ -9,10 +9,20 @@
 #include "Solution.cpp"
 #include "Solution_Hash.cpp"
 #include "Solution_DAG.cpp"
+#include "Solution_Tree.cpp"
 #include <iostream>
 #include <vector>
 
 int main(int argc, const char * argv[]) {
+    Solution_Tree *solution_tree = new Solution_Tree();
+    auto root = new TreeNode(3);
+    root->left = new TreeNode(9);
+    root->right = new TreeNode(20);
+    root->right->left = new TreeNode(15);
+    root->right->right = new TreeNode(7);    
+    solution_tree->levelOrder(root);
+    
+    // All Paths From Source to Target
     Solution_DAG *solution_dag = new Solution_DAG();
     auto graph = std::vector<std::vector<int>> {{1,2}, {3}, {3}, {}};
     solution_dag->allPathSourceTarget(graph);

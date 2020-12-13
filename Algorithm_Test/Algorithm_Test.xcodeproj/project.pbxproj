@@ -11,6 +11,7 @@
 		C2A3B3A525728F7E00DF4D52 /* Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B3A325728F7E00DF4D52 /* Solution.cpp */; };
 		C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */; };
 		C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B6754D258477EA00B67803 /* Solution_DAG.cpp */; };
+		C2B675512585FC0400B67803 /* Solution_Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B675502585FC0400B67803 /* Solution_Tree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		C2A3B3A325728F7E00DF4D52 /* Solution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution.cpp; sourceTree = "<group>"; };
 		C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_Hash.cpp; sourceTree = "<group>"; };
 		C2B6754D258477EA00B67803 /* Solution_DAG.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_DAG.cpp; sourceTree = "<group>"; };
+		C2B675502585FC0400B67803 /* Solution_Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_Tree.cpp; sourceTree = "<group>"; };
+		C2B675522586075E00B67803 /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C2A3B3A325728F7E00DF4D52 /* Solution.cpp */,
 				C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */,
 				C2B6754D258477EA00B67803 /* Solution_DAG.cpp */,
+				C2B675502585FC0400B67803 /* Solution_Tree.cpp */,
+				C2B675522586075E00B67803 /* TreeNode.h */,
 			);
 			path = Algorithm_Test;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */,
+				C2B675512585FC0400B67803 /* Solution_Tree.cpp in Sources */,
 				C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */,
 				C2A3B3A525728F7E00DF4D52 /* Solution.cpp in Sources */,
 				C2A3B39D25728E8300DF4D52 /* main.cpp in Sources */,
