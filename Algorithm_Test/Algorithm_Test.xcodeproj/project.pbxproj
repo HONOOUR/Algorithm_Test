@@ -12,6 +12,8 @@
 		C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */; };
 		C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B6754D258477EA00B67803 /* Solution_DAG.cpp */; };
 		C2B675512585FC0400B67803 /* Solution_Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B675502585FC0400B67803 /* Solution_Tree.cpp */; };
+		C2B67554259865B300B67803 /* Solution_Dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B67553259865B300B67803 /* Solution_Dijkstra.cpp */; };
+		C2F0833525F3D73B00AD8506 /* Solution_LongestSubstringWithoutRepeating.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2F0833425F3D73B00AD8506 /* Solution_LongestSubstringWithoutRepeating.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,8 @@
 		C2B6754D258477EA00B67803 /* Solution_DAG.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_DAG.cpp; sourceTree = "<group>"; };
 		C2B675502585FC0400B67803 /* Solution_Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_Tree.cpp; sourceTree = "<group>"; };
 		C2B675522586075E00B67803 /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		C2B67553259865B300B67803 /* Solution_Dijkstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_Dijkstra.cpp; sourceTree = "<group>"; };
+		C2F0833425F3D73B00AD8506 /* Solution_LongestSubstringWithoutRepeating.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution_LongestSubstringWithoutRepeating.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,10 @@
 				C2A3B3A325728F7E00DF4D52 /* Solution.cpp */,
 				C2A3B3A62573CB3700DF4D52 /* Solution_Hash.cpp */,
 				C2B6754D258477EA00B67803 /* Solution_DAG.cpp */,
+				C2B67553259865B300B67803 /* Solution_Dijkstra.cpp */,
 				C2B675502585FC0400B67803 /* Solution_Tree.cpp */,
 				C2B675522586075E00B67803 /* TreeNode.h */,
+				C2F0833425F3D73B00AD8506 /* Solution_LongestSubstringWithoutRepeating.cpp */,
 			);
 			path = Algorithm_Test;
 			sourceTree = "<group>";
@@ -133,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B67554259865B300B67803 /* Solution_Dijkstra.cpp in Sources */,
+				C2F0833525F3D73B00AD8506 /* Solution_LongestSubstringWithoutRepeating.cpp in Sources */,
 				C2A3B3A72573CB3700DF4D52 /* Solution_Hash.cpp in Sources */,
 				C2B675512585FC0400B67803 /* Solution_Tree.cpp in Sources */,
 				C2B6754F258477EA00B67803 /* Solution_DAG.cpp in Sources */,

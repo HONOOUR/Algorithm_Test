@@ -10,11 +10,24 @@
 #include "Solution_Hash.cpp"
 #include "Solution_DAG.cpp"
 #include "Solution_Tree.cpp"
+#include "Solution_Dijkstra.cpp"
+#include "Solution_LongestSubstringWithoutRepeating.cpp"
+
 #include <iostream>
 #include <vector>
 
 int main(int argc, const char * argv[]) {
+    Solution_LongestSubstringWithoutRepeating longestSubstring;
+    longestSubstring.lengthOfLongestSubstring("abcabcbb");
+    
+    Solution_Dijkstra *solution_dijkstra = new Solution_Dijkstra();
+    auto graph_dijkstra = std::vector<std::vector<int>> {{1}, {0, 2, 4}, {1, 4, 3}, {2}, {1, 2}};
+    solution_dijkstra->dijkstra_shortestPath(graph_dijkstra);
+    
     Solution_Tree *solution_tree = new Solution_Tree();
+    auto graph_short = std::vector<std::vector<int>> {{1,2,3}, {0}, {0}, {0}};
+    solution_tree->shortestPathLength(graph_short);
+    
     auto root = new TreeNode(3);
     root->left = new TreeNode(9);
     root->right = new TreeNode(20);
