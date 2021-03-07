@@ -18,7 +18,8 @@
 
 int main(int argc, const char * argv[]) {
     Solution_LongestSubstringWithoutRepeating longestSubstring;
-    longestSubstring.lengthOfLongestSubstring("abcabcbb");
+//    longestSubstring.lengthOfLongestSubstring("pwwkew");
+    longestSubstring.lengthOfLongestSubstring_2("pwwkew");
     
     Solution_Dijkstra *solution_dijkstra = new Solution_Dijkstra();
     auto graph_dijkstra = std::vector<std::vector<int>> {{1}, {0, 2, 4}, {1, 4, 3}, {2}, {1, 2}};
