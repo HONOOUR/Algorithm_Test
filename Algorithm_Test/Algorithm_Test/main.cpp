@@ -12,11 +12,14 @@
 #include "Solution_Tree.cpp"
 #include "Solution_Dijkstra.cpp"
 #include "Solution_LongestSubstringWithoutRepeating.cpp"
+#include "Solution_KSum.cpp"
 
 #include <iostream>
 #include <vector>
 
 int main(int argc, const char * argv[]) {
+    Solution_KSum ksum;
+    ksum.fourSum(std::vector<int> {1,0,-1,0,-2,2}, 0);
     Solution_LongestSubstringWithoutRepeating longestSubstring;
 //    longestSubstring.lengthOfLongestSubstring("pwwkew");
     longestSubstring.lengthOfLongestSubstring_2("pwwkew");
