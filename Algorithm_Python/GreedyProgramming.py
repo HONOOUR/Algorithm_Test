@@ -230,10 +230,27 @@ class GreedyProgramming():
 
     # https://www.acmicpc.net/problem/2810
     def getCupHolders(self):
-        input = sys.stdin.readline()
+        input = sys.stdin.readline
+        seats_num = int(input())
+        seats = list(input())
+        answer = 0
+
+        couple = []
+        for s in seats:
+            answer += 1
+            if s == "L" and len(couple) == 2:
+                couple = [s]
+            elif s == "L" and len(couple) == 1:
+                answer -= 1
+                couple.append(s)
+            elif s == "L":
+                couple.append(s)
+
+        print(answer)
 
 
 instance = GreedyProgramming()
+instance.getCupHolders()
 instance.getPlaneInGate()
 instance.getUnplugNumber()
 instance.getLowerLevel()

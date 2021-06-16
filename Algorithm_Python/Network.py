@@ -18,14 +18,12 @@ class network:
 
         return answer + 1
 
-
-def dfs(self, vertices: dict, index: int, visited: list) -> list:
-    visited[index] = True
-    for node in vertices[index]:
-        if visited[node] == False:
-            network.dfs(self, vertices, node, visited)
-
-    return visited
+    def dfs(self, vertices: dict, index: int, visited: list) -> list:
+        visited[index] = True
+        for node in vertices[index]:
+            if visited[node] == False:
+                network.dfs(self, vertices, node, visited)
+        return visited
 
 instance = network()
 print(instance.getNetwork(3, [[1, 1, 0], [1, 1, 1], [0, 1, 1]]))
