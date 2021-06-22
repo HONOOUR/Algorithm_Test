@@ -98,8 +98,84 @@ def getBallNumGap():
         # 가장 많이 공이 들어있는 바구니부터 한개씩 더함
         print(basket_num)
 
+# 오셀로 재배치
+# https://www.acmicpc.net/problem/13413
+
+def getOcello(self):
+    input = sys.stdin.readline
+    test_num = int(input())
+    for _ in range(test_num):
+        num = int(input())
+        src = list(input())
+        trg = list(input())
+        tmp = []
+        answer = 0
+        for i in range(num):
+            if src[i] != trg[i]:
+                # src 와 trg 비교시 다른게 있을때 tmp가 비어있으면 tmp 배열에 넣는다.
+                # src 와 trg 비교시 다른게 있을때 tmp 에 아이템이 있으면 마지막아이템과 비교해서 다르면 tmp에서 마지막아이템도 제거하고 비교한 아이템도 제거하고 비교한 아이템도 넣지 않는다 (switch)
+                if tmp and tmp[len(tmp)-1] != src[i]:
+                    answer += 1
+                    tmp.pop(len(tmp)-1)
+                else:
+                    tmp.append(src[i]) # 1. switch two different 
+                                       # 2. flip one
+        answer += len(tmp) # (flip)
+        print(answer)
+
+# 스네이크 버드
+# https://www.acmicpc.net/problem/16435
+
+def getSnakeLength(self):
+    input = sys.stdin.readline
+    fruit_num, snake_len = map(int, input().split())
+    fruits = list(map(int, input().split()))
+    fruits.sort()
+    for fruit in fruits:
+        if fruit <= snake_len:
+            snake_len += 1
+    print(snake_len)
+
+# APC
+# https://www.acmicpc.net/problem/17224
+def getTestSum(self):
+    input = sys.stdin.readline
+    test_num, power, max_test_num = map(int, input().split())
+    tests = []
+    count = 0
+    answer = 0
+    for _ in range(test_num):
+        easy, hard = map(int, input().split())
+        tests.append((easy, hard))
+    tests.sort(key=lambda x: (x[1]))
+
+    # for hard question (priority 1)
+    for test in tests:
+        if count == max_test_num:
+            break
+        if test[1] <= power: 
+            count +=1
+            answer += 140
+        else:
+            break
+        
+    # for easy question (priority 2)
+    tests = tests[count:]
+    tests.sort(key=lambda x: (x[0]))
+    for test in tests:
+        if count == max_test_num: 
+            break
+        if test[0] <= power:
+            count += 1
+            answer += 100
+        else:
+            break
+    print(answer)
 
 getFlowersCount()
 getMostPaidByLectures()
 getHamburgerNum()
 getBallNumGap()
+getOcello()
+getSnakeLength()
+getTestSum()
