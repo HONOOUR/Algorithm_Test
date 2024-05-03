@@ -3,7 +3,7 @@ from collections import deque
 n, m = map(int, input().split())
 graph = [[] for _ in range(n)]
 for i in range(n):
-    graph[i].extend(list(map(int, input())))
+    graph[i].extend(list(map(int, input().split())))
 dx = [0, 0, -1, 1]
 dy = [1, -1, 0, 0]
 
