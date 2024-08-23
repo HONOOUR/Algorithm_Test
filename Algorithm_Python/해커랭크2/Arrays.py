@@ -35,3 +35,17 @@ def minimumSwaps(arr):
             count += 1
 
     return count
+
+from collections import Counter
+def twoStrings(s1, s2):
+    # substring length >= 1
+    if (Counter(s1) - Counter(s2)) != Counter(s1):
+        return 'YES'
+    else:
+        return 'NO'
+    
+def twoStrings_faster(s1, s2):
+    if set(s1) & set(s2):
+        return 'YES'
+    else:
+        return 'NO'
