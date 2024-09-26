@@ -19,3 +19,23 @@ def sherlockAndAnagrams(s):
     print(total_pairs)
 
 sherlockAndAnagrams("cdcd")
+
+# https://www.hackerrank.com/challenges/count-triplets-1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps
+def countTriplets(arr, r):
+    count = 0
+    left_count = Counter()
+    right_count = Counter(arr)
+
+    for num in arr:
+        right_count[num] -= 1
+        
+        # triplet: (num / r, num, num * r)
+        if num % r == 0:
+            left = num // r
+            right = num * r
+            count += (left_count[left] * right_count[right])
+            
+        left_count[num] += 1
+    
+    return count
+

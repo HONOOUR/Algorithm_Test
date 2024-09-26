@@ -30,6 +30,17 @@ def minimumSwaps(arr):
 
     return count
 
+def minimumSwaps_1(arr):
+    count = 0
+    for i in range(len(arr)):
+        while arr[i] != i+1:
+            index = i-1
+            temp = arr[i]
+            arr[i] = arr[index]
+            arr[index] = temp
+            count +=1
+    return count
+
 from collections import Counter
 def twoStrings(s1, s2):
     # substring length >= 1

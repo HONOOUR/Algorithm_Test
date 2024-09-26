@@ -15,7 +15,7 @@ makeAnagram('fcrxzwscanmligyxyvym', 'jxwtrhvujlmrpdoqbisbwhmgpmeoke')
 
 def isValid(s):
     s_dict = Counter(s)
-    s_frequency_dict =Counter(s_dict.values())
+    s_frequency_dict = Counter(s_dict.values())
     if len(s_frequency_dict) == 1:
         return 'YES'
     elif len(s_frequency_dict) > 2:

@@ -33,3 +33,13 @@ def rotLeft(a, d):
         answer[abs(i+n-d) % n] = a[i]
         
     return answer
+
+# Palindrome
+def solution(S):
+    # Implement your solution here
+    for i in range(len(S)):
+        left_string = S[:i]
+        right_string = S[i+1:]
+        if left_string == right_string[::-1]:
+            return i
+    return -1
