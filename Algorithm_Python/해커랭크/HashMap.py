@@ -35,5 +35,19 @@ def solution(participant, completion):
     answer = list(answer_counter.keys())[0]
     return answer
 
+def solution(phone_book):
+    # create dict for lookup
+    phone_book_dict = {}
+    for number in phone_book:
+        phone_book_dict[number] = number
+    
+    # create prefix
+    for numbers in phone_book:
+        prefix_num = ""
+        for num in numbers:
+            prefix_num += num
+            if prefix_num != numbers and prefix_num in phone_book_dict:
+                return False
+    return True
 
 checkMagazine({"give", "me", "one", "grand", "today", "night"}, {"give", "one", "grand", "today"})
