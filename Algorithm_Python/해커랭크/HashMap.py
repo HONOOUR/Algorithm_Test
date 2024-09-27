@@ -26,6 +26,14 @@ def checkMagazine(magazine, note):
     else:
         print('Yes')
           
+# https://school.programmers.co.kr/learn/courses/30/lessons/42576
+def solution(participant, completion):
+    answer = ''
+    participant_counter = Counter(participant)
+    completion_counter = Counter(completion)
+    answer_counter = participant_counter - completion_counter
+    answer = list(answer_counter.keys())[0]
+    return answer
 
 
 checkMagazine({"give", "me", "one", "grand", "today", "night"}, {"give", "one", "grand", "today"})
