@@ -37,7 +37,7 @@ def solution(numbers):
   
 solution("17")
 
-https://school.programmers.co.kr/learn/courses/30/lessons/42842
+# https://school.programmers.co.kr/learn/courses/30/lessons/42842
 def solution(brown, yellow):
     answer = []
     # brown_y = yellow_y + 2
@@ -48,3 +48,19 @@ def solution(brown, yellow):
             yellow_y = yellow // yellow_x
             if ((yellow_x+2)+(yellow_y+2))*2== brown+4:
                 return [yellow_y+2, yellow_x+2]
+
+# https://school.programmers.co.kr/learn/courses/30/lessons/87946
+from itertools import permutations
+def solution(k, dungeons):
+    max_count = -1
+    for arr in permutations(dungeons, len(dungeons)):
+        count = 0
+        start_power = k
+        for min_power, power in arr:
+            if start_power >= min_power:
+                start_power -= power
+                count += 1
+        max_count = max(max_count, count)
+    return max_count
+
+solution(80, [[80,20],[50,40],[30,10]])
